@@ -1,0 +1,79 @@
+/*ADMIN Section*/
+.admin{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(https://cdn.discordapp.com/attachments/878131065053671454/1076914819011182622/IMG_9394.jpg) ;
+    background-size: cover;
+    background-position: center; 
+}
+.txth1 {
+    font-size: 250%;
+    padding-bottom: 10px;
+}
+
+/* BIG BOX */
+.boxie {
+    background-color: #FFFFFF;
+    text-align: center;
+    width: 40%;
+    height: auto;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    margin-bottom: 4px;
+
+    border-color: #5a5b6d;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.box .button .a{
+    text-align: left;
+}
+
+/* Product Button diff size */
+.buttonie {
+    background-color: #2c52b3;
+    color: #ffffff;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.buttonie a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.buttonie a:hover{
+    color: #fb2f38;
+}
+
+/* User Button diff size */
+.buttonie-a {
+    background-color: #2c52b3;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.buttonie-a a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.buttonie-a a:hover{
+    color: #fb2f38;
+}

@@ -1,0 +1,269 @@
+/* apply to all */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*new SEARCH SECTION*/
+.container {
+    width: 150%;
+    height: 20vh;
+    display: flex;
+    align-items: flex-start;
+    /* justify-content: center; */
+    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-left: 20%;
+   
+
+}
+.search-bar{
+    background: #fff;
+    width: 400%;
+    max-width: 800px;
+    display: flex;
+    padding: 2px;
+    border-radius: 4px;
+    margin-left: 10px;
+
+}
+#select {
+    background: tomato;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 15px;
+    width: auto; 
+    padding: 25px 20px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 4px;
+}
+#select img{
+    width: 15px;
+}
+#select ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background: #fff;
+    font-size: 13px;
+    color: #555;
+    width: 100%;
+    border-radius: 4px;
+    max-height: 0;
+    overflow: hidden;
+}
+#select ul li{
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.search-bar input{
+    padding: 10px 20px;
+    top: 0;
+    left: 0;
+    width: 150%;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+
+
+}
+#select ul.open{
+    max-height: 300px;
+}
+
+ .search-bar .button{
+    background: #fff867;
+    border-radius: 4px;   
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.search-bar .button:hover{
+    background: #67d4ff;
+} 
+
+ .search-bar .button .fa-search{
+    color: black;
+    font-size: 30px;
+}  
+#select ul.closed {
+    max-height: 0;
+    transition: max-height 0.5s;
+}
+
+#select ul.open {
+    max-height: 200px;
+    transition: max-height 0.5s;
+}
+.dropdown-container {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.dropdown-container select {
+    margin-left: 5px;
+}
+
+.dropdown-container label {
+    color: #fff;
+    font-size: 15px;
+}
+/* newone HEAD (ALL PRODUCT) ADJUST TEXT*/
+.headpd{
+    text-align: center;
+    font-size: 4rem;
+    color: #464754;
+    padding:2rem;
+    margin:2 rem 0;
+}
+
+/* HEADING "ALL PRODUCT" */
+.bgproduct {
+    background-color: #f3e816;
+    border-radius: 12px;
+    text-align: center;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 0px;
+    border-width: 2px;
+    
+}
+
+/* background image */
+.products {   
+    background-image: url(https://cdn.discordapp.com/attachments/878131065053671454/1076914819011182622/IMG_9394.jpg) ;
+}
+
+/* container of all products */
+.products .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+    background-color: tomato;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3%;
+    padding-top: 1%;
+}
+
+/* adjust each box in box container */
+.products .box-container .box{
+    flex:1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    border:.1rem solid rgba(0,0,0,.1);
+    position: relative;    
+    background-color: white;
+}
+
+/* adjust image div */
+.products .box-container .box .image{
+    position: relative; /*normal position*/
+    text-align: center;
+    padding-top: 3rem;
+    overflow:hidden;
+}
+
+/* PIC SIZE */
+.products .box-container .box .image img{
+    height:30rem;
+}
+
+.products .box-container .box:hover .image img{
+    transform: scale(1.1); /*resize element */
+}
+
+.products .box-container .box .image .icons{
+    position: absolute; /*positioned relative to the nearest positioned ancestor*/
+    bottom:-7rem; left:0; right:0;
+    display: flex;
+}
+
+/* button detail and like adjust bottom */
+.products .box-container .box:hover .image .icons{
+    bottom:0;
+}
+
+/* button detail and like  */
+.products .box-container .box .image .icons a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width:50%;
+    color:#fff;
+    text-decoration: none;
+}
+
+/* button detail and like when hover */
+.products .box-container .box .image .icons a:hover{
+    background:#333;
+    text-decoration: none;
+}
+
+/* border of detail in left and right */
+.products .box-container .box .image .icons .cart-btn{
+    border-left: .1rem solid #fff7;
+    border-right: .1rem solid #fff7;
+    width:100%;
+}
+
+/* IN each product */
+/* NAME AND PRICE */
+.products .box-container .box .content{
+    padding:2rem;
+    text-align: center;
+}
+
+/* NAME */
+.products .box-container .box .content h3{
+    font-size: 2.5rem;
+    color:#333;
+}
+
+/* PRICE */
+.products .box-container .box .content .price{
+    font-size: 2.5rem;
+    color: #9ef57c;
+    font-weight: bolder;
+    padding-top: 0rem;
+    bottom: auto;
+}
+
+/*product detail edit*/
+.cen {
+    text-align: center;
+    background-color: #f3f3f3;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top:5px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.cen form{
+    text-align: center;
+}
+
+/*add button*/
+.colorbutton {
+    background: #fff867;
+    padding-left:10px;
+    /* padding-right:10px;*/
+}
+
+/*delete and update product button*/
+.detailbutton {
+    background: tomato;
+    width:100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+
+    <link rel="stylesheet" href="https://kit.fontawesome.com/6c12e1ae8d.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/hpstyle.css">
+    <link rel="stylesheet" href="/css/search.css">
+        
+    <!-- font poppins -->
+	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="http://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="api.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="/html/api.js"></script>
+
+</head>
+<body>
+    <header>
+        <a href="/html/index.html" class="logo">Goods Days <span>.</span></a>
+        <!-- Navigation menu -->
+        <nav class="navbar">
+            <a href="/html/index.html">home</a>
+            <a href="/html/aboutus.html">about</a>
+            <a href="/search">search</a>
+            <a href="/html/contactus.html">contact</a>
+        </nav>
+
+        <div class="icons">
+            <a href="/html/login.html" class="fa fa-user"></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="products" id="products"> <!-- Search Form that will take all of the criteria and search text input from user to index.ejs -->
+            <div class="container">
+                <form method="POST" action="/search/searchedpro">  <!-- Dropdowns for filtering -->
+                    <div class="search-bar">
+                        <div id="select">
+                            <div class="dropdown-container">
+                                <label for="anime">Anime:</label>   <!-- Search by anime name -->
+                                <select id="anime" name="anime">
+                                    <option value="">Select Anime</option>
+                                    <option value="One Piece">One Piece</option>
+                                    <option value="Gundam">Gundam</option>
+                                    <option value="Attack On Titan">Attack On Titan</option>
+                                </select>
+                            </div>
+                            <div class="dropdown-container">
+                                <label for="type">Type:</label>
+                                <select id="type" name="type">  <!-- Search by type of toy -->
+                                    <option value="">Select Type</option>
+                                    <option value="Gunpla">Gunpla</option>
+                                    <option value="Stand">Stand</option>
+                                    <option value="Doll">Doll</option>
+                                    <option value="Figure">Figure</option>
+                                    <option value="Shoes">Shoes</option>
+                                </select>
+                            </div>
+                            <div class="dropdown-container">
+                                <label for="brand">Brand:</label>   <!-- Search by brand that sells that toy -->
+                                <select id="brand" name="brand">
+                                    <option value="">Select Brand</option>
+                                    <option value="BANDAI">BANDAI</option>
+                                    <option value="Shueisha">Shueisha</option>
+                                    <option value="TakaraTomy Arts">TakaraTomy Arts</option>
+                                    <option value="GOOD SMILE COMPANY">GOOD SMILE COMPANY</option>
+                                    <option value="Mayla Classic">Mayla Classic</option>
+                                </select>
+                            </div>
+                        </div>
+                        <input type="text" id="inputfield" name="searchTerm" placeholder="Search by All Categories">
+                        <button type="submit" class="button">
+                            <i class="fa fa-search fa-lg"></i>  <!-- Search button to submit and go to /search/searchedpro -->
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="bgproduct"> <!-- Background for our website -->
+                <h1 class="headpd"> Products</h1>
+                <div class="box-container">
+                    <% data.forEach((product) => { %>   <!-- Loop through products and display each one -->
+                        <div class="box">
+                            <div class="image">
+                                <img src="<%= product.image_url %>" alt="<%= product.name %>">  <!-- show product image by image url from database -->
+                                <div class="icons">
+                                    <a href="/searchedpro/<%= product.Proid %>" class="cart-btn">detail</a> <!-- Detail button for go to the product page -->
+                                </div>
+                            </div>
+                            <div class="content">   <!-- display product'name and product' price -->
+                                <h3><%= product.name %></h3>
+                                <div class="price"><%= product.price %> ¥</div>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer section -->
+    <footer>
+        <div class="box-container">
+            <div class="box">
+                <h3>About Goods Days</h3>
+                <a href="/html/index.html">Home</a>
+                <a href="/html/aboutus.html">About</a>
+                <a href="/search">Search</a>
+                <a href="/html/login.html">Log-in</a>
+                <a href="/html/signup.html">Sign-up</a>
+                <a href="/html/contactus.html">Contact Us</a>
+            </div>
+            <!-- Admin management  -->
+            <div class="box">
+                <h3 class="fa fa-user-secret"></h3>
+                <a href="/">Admin Management</a>
+            </div>
+
+            <!-- API -->
+            <div class="box">
+
+                <script> 
+                    // His function is triggered when the search button is clicked, and it retrieves data from the Anime News Network API
+                    function getConferenceResponses() {
+                        let query = document.querySelector("#q").value; // Get query from a textbox
+                        console.log(query);
+                        let rooturl = "https://cdn.animenewsnetwork.com/encyclopedia/api.xml?title=~" + query; //Request URL
+                        fetch(rooturl)
+                            .then(res => res.text()) // Get JSON from the response
+                            // .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+                            .then((data) => {
+                                //console.log(data)
+                                let objson = xml2json.fromStr(data);
+                                console.log(objson);
+                                for (let i = 0; i < objson.ann.anime.length; i++) {
+                                    let title = objson.ann.anime[i]['@attributes'].name;
+                                    let precision = objson.ann.anime[i]['@attributes'].precision;
+
+                                    document.querySelector("#output").innerHTML += "<p>Name : " + title + "</p>" + "<p>Precision :" + precision + "</p><br>";
+                                }
+                            })
+                            .catch((err) => console.log(err));
+                    }
+                </script>
+
+                <h2>News Anime</h2>
+                <input type="text" placeholder="anime" id="q">
+        
+                <button onclick="getConferenceResponses()"><i class="ri-search-line"></i></button>
+        
+                <p>Anime</p>
+                <div id="output"></div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

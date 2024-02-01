@@ -1,0 +1,134 @@
+/*HEAD (ALL PRODUCT) ADJUST TEXT*/
+.headpd{
+    text-align: center;
+    font-size: 4rem;
+    color: #000000;
+    padding:5rem;
+    margin:2rem 0;
+}
+
+/* HEADING "ALL PRODUCT" */
+.bgproduct {
+    background-color: #ffffff;
+    border-radius: 12px;
+    text-align: center;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 0px;
+
+    border-color: #5a5b6d;
+    border-style: solid;
+    border-width: 2px;
+}
+
+/* 'ADD PRODUCT' BUTTON */
+.buttonie {
+    background-color: #2c52b3;
+    color: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 92%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.buttonie a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.buttonie a:hover{
+    color: #fb2f38;
+}
+
+/* background image */
+.products {
+    background-image: url(https://cdn.discordapp.com/attachments/878131065053671454/1076914819011182622/IMG_9394.jpg) ;
+    margin-bottom: 20px;
+}
+
+/* container of all products */
+.products .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    background-color: #ffffff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 6%;
+}
+
+/* adjust each box in box container */
+.products .box-container .box{
+    flex:1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    border:.1rem solid rgba(0,0,0,.1);
+    position: relative;    
+}
+
+/* adjust image div */
+.products .box-container .box .image{
+    position: relative; /*normal position*/
+    text-align: center;
+    padding-top: 2rem;
+    overflow:hidden;
+}
+
+/* PIC SIZE */
+.products .box-container .box .image img{
+    height:25rem;
+}
+
+.products .box-container .box:hover .image img{
+    transform: scale(1.1); /*resize element */
+}
+
+.products .box-container .box .image .icons{
+    position: absolute; /*positioned relative to the nearest positioned ancestor*/
+    bottom:-7rem; left:0; right:0;
+    display: flex;
+}
+/* button detail and like adjust bottom */
+.products .box-container .box:hover .image .icons{
+    bottom:0;
+}
+
+.products .box-container .box .image .icons a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width:50%;
+    color:#fff;
+}
+
+/* border of detail in left and right */
+.products .box-container .box .image .icons .cart-btn{
+    border-left: .1rem solid #fff7;
+    border-right: .1rem solid #fff7;
+    width:100%;
+}
+
+/* icon hover */
+.products .box-container .box .image .icons a:hover{
+    background:#333;
+}
+
+/* IN each product */
+.products .box-container .box .content{
+    padding:2rem;
+    text-align: center;
+}
+
+/* NAME */
+.products .box-container .box .content h3{
+    font-size: 2.5rem;
+    color:#333;
+}

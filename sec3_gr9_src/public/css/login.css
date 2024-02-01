@@ -1,0 +1,68 @@
+/* FOR login.html, signup.html, adminlogin.html */
+/* LOGIN button */
+button {
+    font-size: 15px;
+    padding:2%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+/* Remember BUtton */
+#remember{
+    left: 1%;
+    bottom: 1%;
+} 
+
+/* forgot BUtton */
+#forgor{
+    text-align: left; 
+}
+
+/* LOgin Section */
+.login{
+    display: flex; /* place normally  */
+    align-items: center;
+    min-height: 90vh; /* this section heigh*/
+    background-image: url(https://cdn.discordapp.com/attachments/878131065053671454/1076914819011182622/IMG_9394.jpg) ;
+    background-size: cover;
+    background-position: center; 
+}
+
+/* BOX */
+.bx {
+    vertical-align: middle;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+    background-color: #FFF867;
+    font-size: 15px;
+
+    border-radius: 10px;
+    border-color: #5a5b6d;
+    border-style: solid;
+    border-width: 2px;
+}
+
+/* HEAD */
+.h2size {
+    font-size: 220%;
+}
+
+/* adjecy css in fieldsit/form */
+.field {
+        vertical-align: middle;
+        margin-top: 3%; /*pushing the box down*/
+        margin-left: auto;
+        margin-right: auto;/*set the box at the center*/
+        width: 28%;
+        padding: 3%; /*increasing the box size*/
+        text-align: center;
+        background-color: #fff867;
+        font-size: 15px;
+       border-radius: 10px; /*rounded border*/
+}
+ 

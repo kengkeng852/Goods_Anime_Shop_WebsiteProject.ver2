@@ -1,0 +1,127 @@
+/* ADD PRODUCT BUTTON */
+.buttonie {
+    background-color: #2c52b3;
+    color: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 90%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.buttonie a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* ADD PRODUCT BUTTON when hover */
+.buttonie a:hover{
+    color: #464754;
+}
+
+/* User Head */
+.headus{
+    text-align: center;
+    font-size: 4rem;
+    color: #000000;
+    /* color: #464754; */
+    padding:1rem;
+    margin:2rem 0;
+}
+
+.adminadd {
+    border-color: #000000;
+}
+.user{
+    text-transform: capitalize;
+    background-image: url(https://cdn.discordapp.com/attachments/878131065053671454/1076914819011182622/IMG_9394.jpg) ;
+  }
+
+
+.user-list{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+/* --------------- */
+
+
+.table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 15px;
+    min-width: 100%;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+/* Adjust row in head */
+table thead tr{
+    color: #000000;
+    background: #fff867;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* DETAIL padding */
+.table th, .table td{
+    padding: 12px 15px;
+}
+
+/* BORDER BOTTOM in each row*/
+.table tbody tr{
+    border-bottom: 1px solid #ddd;
+}
+
+/* Background color user when id is odd */
+.table tbody tr:nth-of-type(odd){
+    background: #f3f3f3;
+}
+
+
+/* .table tbody tr.active{
+    font-weight: bold;
+    color: #fff867;
+} */
+
+/* BORDER BOTTOM */
+.table tbody tr:last-of-type{
+    border-bottom: 2px solid #fff867;
+}
+
+/* Edit and delete button */
+.table button a{
+    padding: 6px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: transparent;
+    color: #000000;
+    border: 1px solid #464754;
+}
+
+/* Edit and delete button when hover*/
+.table button a:hover{
+    background: #464754;
+    color: #fff;
+    transition: 0.5rem;
+}
+
+.cen {
+    text-align: center;
+    /* background-color: #f3f3f3; */
+}
+
+.cen form{
+    text-align: center;
+}
+
+.colorbutton {
+    background: #fff867;
+
+}

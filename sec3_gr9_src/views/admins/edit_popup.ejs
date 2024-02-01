@@ -1,0 +1,36 @@
+<!-- Update popup -->
+<!-- stylesheets/form_popup.css -->
+<div class="editPopup"> 
+  <div class="formPopup" id="popupForm<%=curr_id%>">
+    <form class="formContainer">
+      <h2>Editing Admin ID: <%=curr_id%></h2> <!--from include('edit_popup.ejs',{curr_id: d.id})-->
+      
+      <!--INPUT UPDATE section start-->
+      <!--All Update input is frequired because admin information is not null-->
+      <label for="Fname">
+        <strong>Name</strong>         <!--contents have strong importance-->
+      </label>
+      <input type="text" id="Fname" placeholder="First Name" name="Fname" required>
+      
+      <label for="Lname">
+        <strong>Surname</strong>      <!--contents have strong importance-->
+      </label>
+      <input type="text" id="Lname" placeholder="Last Name" name="Lname" required>
+
+      <label for="Role">
+        <strong>Role</strong>         <!--contents have strong importance-->
+      </label>
+      <input type="text" id="role" placeholder="Role" name="role" required>
+
+      <label for="email">
+        <strong>Email</strong>        <!--contents have strong importance-->
+      </label>
+      <input type="text" id="email" placeholder="BoyNextDoor@mail.com" name="email"  required>
+      <!--INPUT UPDATE section end-->
+      <button type="submit" formaction="admins/update/<%=curr_id%>" formmethod="POST" class="btn">Make Change</button>
+
+      <!-- IGNORE THE ERROR ON CLOSEFORM(), THIS NORMAL -->
+      <button type="button" class="btn cancel" onclick="closeForm(<%=curr_id%>)">Close</button>
+    </form>
+  </div>
+</div>

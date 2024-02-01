@@ -1,0 +1,71 @@
+fieldset {
+    vertical-align: middle;
+    margin-top: 7%; /*pushing the box down*/
+    margin-left: auto;
+    margin-right: auto;/*set the box at the center*/
+    width: 28%;
+    padding: 3%; /*increasing the box size*/
+    text-align: center;
+    background-color: #fff867;
+    font-size: 15px;
+   border-radius: 10px; /*rounded border*/
+}
+body{
+    background-image: url(https://cdn.discordapp.com/attachments/878131065053671454/1076914819011182622/IMG_9394.jpg) ;
+}
+button{ /*adjusting button size*/
+    font-size: 15px;
+    padding:2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: 10%;
+}
+
+.signup{
+    display: flex;
+    align-items: center;
+    min-height: 90vh;
+    background-image: url(https://cdn.discordapp.com/attachments/878131065053671454/1076914819011182622/IMG_9394.jpg) ;
+    background-size: cover;
+    background-position: center; 
+}
+
+.bx {
+    vertical-align: middle;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+    background-color: #FFF867;
+    font-size: 15px;
+
+    border-radius: 10px;
+    border-color: #5a5b6d;
+    border-style: solid;
+    border-width: 2px;
+}
+
+#remember{
+    padding-right: 5%;
+}
+#forgor{
+    text-align: left;
+    
+}
+
+#loginFooter{ /*make the footer stays at the bottom*/
+    margin-top: 6%;
+    position: sticky;
+    bottom: 2%;
+    top: 50%;
+  
+}
+#bottomRightPlease{ /*pushing some buttons to the bottom right*/
+    align-self: flex-end;
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+}
